@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.whereismycar.Domain.Car;
 import android.widget.AdapterView;
@@ -145,6 +146,8 @@ public class EditCarActivity extends AppCompatActivity implements AdapterView.On
                 receivedCarUsageNo);
 
         Map<String, Object> postValues = c.toMap();
+
+        Log.d("editCar", postValues.toString());
 
         FirebaseDatabase.getInstance().getReference("Cars").child(receivedCarID).updateChildren(postValues);
         finish();

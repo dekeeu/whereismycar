@@ -66,6 +66,14 @@
             android:onClick="redirectUserToCars"/>
 
         <Button
+            android:id="@+id/reportsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="redirectUserToReports"
+            android:text="@string/reports" />
+
+        <Button
             android:id="@+id/contactBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,8 +86,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/exit"
-            android:onClick="exitUser"/>
+            android:onClick="exitUser"
+            android:text="@string/exit" />
     </LinearLayout>
 
 </RelativeLayout>

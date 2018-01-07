@@ -45,9 +45,9 @@ public class CarListAdapter extends ArrayAdapter {
 
         Car currentCar = cars.get(position);
 
-        plateTextView.setText(currentCar.getLicensePlate());
+        plateTextView.setText(currentCar.getLicensePlateNumber());
         infoTextView.setText(currentCar.getBrand() + " - " + currentCar.getModel() + " - " + currentCar.getColor());
-        imageView.setImageResource(R.drawable.common_google_signin_btn_icon_dark);
+        //imageView.setImageResource(R.drawable.common_google_signin_btn_icon_dark);
 
         Log.w("CarListAdapter", plateTextView.getText().toString());
 

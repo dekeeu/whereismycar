@@ -34,7 +34,7 @@ public class MyProfileActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         heyTextView = (TextView)findViewById(R.id.heyTextView);
-        heyTextView.setText(mAuth.getCurrentUser().getEmail());
+        heyTextView.setText("Hey, " + mAuth.getCurrentUser().getEmail());
     }
 
     public void redirectUserToAdd(View view) {
@@ -59,5 +59,10 @@ public class MyProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void redirectUserToReports(View view) {
+        Intent intent = new Intent(this, ListReportsActivity.class);
+        startActivity(intent);
     }
 }

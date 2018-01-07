@@ -94,7 +94,7 @@ public class ListCarsActivity extends AppCompatActivity {
                             c.setBrand(changedCar.getBrand());
                             c.setModel(changedCar.getModel());
                             c.setColor(changedCar.getColor());
-                            c.setLicensePlate(changedCar.getLicensePlate());
+                            c.setLicensePlateNumber(changedCar.getLicensePlateNumber());
                         }
                     }
                 }
@@ -136,12 +136,13 @@ public class ListCarsActivity extends AppCompatActivity {
 
                 Car selectedCar = cars.get(position);
 
+                Log.w("ListCars:::", selectedCar.toString());
                 Intent intent = new Intent(ListCarsActivity.this, EditCarActivity.class);
                 intent.putExtra(selectedCarID, selectedCar.getID());
                 intent.putExtra(selectedCarBrand, selectedCar.getBrand());
                 intent.putExtra(selectedCarModel, selectedCar.getModel());
                 intent.putExtra(selectedCarColor, selectedCar.getColor());
-                intent.putExtra(selectedCarLicensePlate, selectedCar.getLicensePlate());
+                intent.putExtra(selectedCarLicensePlate, selectedCar.getLicensePlateNumber());
                 intent.putExtra(selectedCarUsageNo, selectedCar.getUsageNumber());
 
 

@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -43,9 +46,11 @@
         <activity
             android:name=".RegisterActivity"
             android:label="Register"
-            android:parentActivityName=".LoginActivity"><meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".LoginActivity" /></activity>
+            android:parentActivityName=".LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+        </activity>
         <activity
             android:name=".AddCarActivity"
             android:parentActivityName=".MyProfileActivity">
@@ -74,6 +79,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ListCarsActivity" />
         </activity>
+        <activity
+            android:name=".ListReportsActivity"
+            android:parentActivityName=".MyProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListReportsActivity" />
+        </activity>
+        <activity android:name=".AddReportActivity"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,7 @@ public class Car {
     private String Brand;
     private String Model;
     private String Color;
-    private String LicensePlate;
+    private String LicensePlateNumber;
     private String Owner;
     private int UsageNumber;
 
@@ -23,12 +23,12 @@ public class Car {
     public Car() {
     }
 
-    public Car(String id, String brand, String model, String color, String licensePlate, String owner, Integer usageNumber) {
+    public Car(String id, String brand, String model, String color, String licensePlateNumber, String owner, Integer usageNumber) {
         ID = id;
         Brand = brand;
         Model = model;
         Color = color;
-        LicensePlate = licensePlate;
+        LicensePlateNumber = licensePlateNumber;
         Owner = owner;
         UsageNumber = usageNumber;
     }
@@ -73,12 +73,12 @@ public class Car {
         Color = color;
     }
 
-    public String getLicensePlate() {
-        return LicensePlate;
+    public String getLicensePlateNumber() {
+        return LicensePlateNumber;
     }
 
-    public void setLicensePlate(String licensePlate) {
-        LicensePlate = licensePlate;
+    public void setLicensePlateNumber(String licensePlateNumber) {
+        LicensePlateNumber = licensePlateNumber;
     }
 
     public String getOwner() {
@@ -96,7 +96,7 @@ public class Car {
         result.put("Brand", this.Brand);
         result.put("Model", this.Model);
         result.put("Color", this.Color);
-        result.put("LicensePlate", this.LicensePlate);
+        result.put("LicensePlateNumber", this.LicensePlateNumber);
         result.put("Owner", this.Owner);
         result.put("UsageNumber", this.UsageNumber);
 
@@ -110,7 +110,7 @@ public class Car {
                 ", Brand='" + Brand + '\'' +
                 ", Model='" + Model + '\'' +
                 ", Color='" + Color + '\'' +
-                ", LicensePlate='" + LicensePlate + '\'' +
+                ", LicensePlateNumber='" + LicensePlateNumber + '\'' +
                 ", Owner='" + Owner + '\'' +
                 ", UsageNumber=" + UsageNumber +
                 '}';
